@@ -25,5 +25,5 @@ alert(false == 0); // true
 alert(0 == false); // true
 alert(0 === false); // false, 피연산자의 형이 다르기 때문입니다.
 /*
-'===' compares without type convertion
+'===' compare without type convertion
 */
