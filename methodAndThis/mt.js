@@ -24,3 +24,13 @@ user.sayHi();
 function sayHi() {
     alert(this.name);
 }
+
+
+let user = {
+    firstName: "보라",
+    sayHi() {
+        let arrow = () => alert(this.firstName);
+        arrow();
+    }
+};
+user.sayHi(); // 보라
