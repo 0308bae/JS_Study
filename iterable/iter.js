@@ -18,6 +18,10 @@ let range = {
 for (let num of range) {
     alert(num); // 1, then 2, 3, 4, 5
 }
+// 각 숫자를 제곱
+let arr = Array.from(range, num => num * num);
+alert(arr); // 1,4,9,16,25
+
 
 for (let char of "test") {
     // 글자 하나당 한 번 실행됩니다(4회 호출).
@@ -29,12 +33,9 @@ for (let char of str) {
 }
 
 let str = "Hello";
-
 // for..of를 사용한 것과 동일한 작업을 합니다.
 // for (let char of str) alert(char);
-
 let iterator = str[Symbol.iterator]();
-
 while (true) {
     let result = iterator.next();
     if (result.done) break;

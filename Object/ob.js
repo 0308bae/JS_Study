@@ -45,7 +45,6 @@ let user = {
     age: 30,
     isAdmin: true
 };
-
 for (let key in user) {
     // 키
     alert(key); // name, age, isAdmin

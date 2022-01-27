@@ -40,3 +40,16 @@ alert(merged); // 0,3,5,1,2,8,9,15 (0, arr, 2, arr2 순서로 합쳐집니다.)
 
 let str = "Hello";
 alert([...str]); // H,e,l,l,o
+
+
+let obj = { a: 1, b: 2, c: 3 };
+let objCopy = { ...obj }; // 객체를 펼쳐서 각 요소를 분리후, 매개변수 목록으로 만든 다음에
+// 매개변수 목록을 새로운 객체에 할당함
+// 객체 복사본의 프로퍼티들이 기존 객체의 프로퍼티들과 진짜 같을까요?
+alert(JSON.stringify(obj) === JSON.stringify(objCopy)); // true
+// 두 객체는 같을까요?
+alert(obj === objCopy); // false (참조가 다름)
+// 참조가 다르므로 기존 객체를 수정해도 복사본은 영향을 받지 않습니다.
+obj.d = 4;
+alert(JSON.stringify(obj)); // {"a":1,"b":2,"c":3,"d":4}
+alert(JSON.stringify(objCopy)); // {"a":1,"b":2,"c":3}

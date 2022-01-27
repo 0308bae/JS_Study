@@ -38,3 +38,4 @@ for (let amount of recipeMap.values()) {
 for (let entry of recipeMap) { // recipeMap.entries()와 동일합니다.
     alert(entry); // cucumber,500 ...
 }
+
